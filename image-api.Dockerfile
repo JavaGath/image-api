@@ -1,7 +1,6 @@
 FROM maven:3.9
 # Create app-directory and copy the project
 ADD . /image-api
-RUN cp -R image-api/target/images/ /root/images/
 
 WORKDIR /image-api
 

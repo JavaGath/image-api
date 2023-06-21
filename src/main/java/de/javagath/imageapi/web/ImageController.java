@@ -22,7 +22,7 @@ public class ImageController {
     String url = request.getRequestURI();
     String[] parts = url.split("/", 3);
     MediaType contentType = MediaType.IMAGE_PNG;
-    File initialFile = new File("../images/" + parts[2]);
+    File initialFile = new File("mnt/images/" + parts[1] + "/" + parts[2]);
     InputStream imgFile = new FileInputStream(initialFile);
     return ResponseEntity.ok()
         .contentType(contentType)
